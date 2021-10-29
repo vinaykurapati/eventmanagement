@@ -29,7 +29,6 @@ if (isset($_SESSION['email'])) {
 <body class="d-flex flex-column vh-100">
     <?php
     include 'includes/header.php';
-    include 'includes/check-if-added.php';
     ?>
     <div class="container mt-auto">
         <div class="mx-5">

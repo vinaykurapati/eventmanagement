@@ -23,24 +23,27 @@ include "includes/common.php"
 <body class="d-flex flex-column vh-100">
     <?php
     include 'includes/header.php';
-    include 'includes/check-if-added.php';
     ?>
 
     <div class="container">
         <div class=" my-5 row justify-content-center">
             <div class="col-md-6">
                 <div class="text-center">
-                    <h2>Successfully Registered</h2>
+                    <?php
+                    if (isset($_GET["err"])) {
+                        echo $_GET['err'];
+                    } else if (isset($_GET["msg"])) {
+                        echo $_GET['msg'];
+                    }
+                    ?>
                 </div>
                 <hr>
                 <div>
-                    <h4>Preview</h4>
-                    <pre>Full Name               : name
-Email                   : abc@gmail.com
-Department              : dep
-Number of Participates  : no
-Event                   : event
-Event date              : 01/01/2021</pre>
+                    <?php
+                    if (isset($_GET["det"])) {
+                        echo $_GET['det'];
+                    }
+                    ?>
                 </div>
                 <div class="text-center">
                     <a href="Home.php" class="btn btn-warning" style="width: 100px;">OK</a>

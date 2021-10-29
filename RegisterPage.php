@@ -6,16 +6,17 @@ include 'includes/common.php';
 <head>
     <title>Register Event</title>
     <style>
-        footer{
+        footer {
             color: #6a6c6d;
         }
-        p a{
+
+        p a {
             text-decoration: none;
         }
     </style>
     <link rel="stylesheet" href="bootstrap-5.1.0-dist/css/bootstrap.min.css" type="text/css">
     <script type="text/javascript" src="bootstrap-5.1.0-dist/js/jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
 </head>
 
 <body class="d-flex flex-column vh-100">
@@ -31,10 +32,10 @@ include 'includes/common.php';
                         <h3 class="my-2" style="color:black">Register Event</h3>
                     </div>
                     <div class="card-body">
-                        <form class="row g-3 needs-validation" novalidate method="post" action="success.php">
+                        <form class="row g-3 needs-validation" novalidate method="post" action="reg-script.php">
                             <div class="">
                                 <label for="name" class="form-label mt-2">Full name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name" name="fullname" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -48,7 +49,7 @@ include 'includes/common.php';
                             </div>
                             <div class="">
                                 <label for="candidatesno" class="form-label mt-1">Number of Participates</label>
-                                <input type="number" class="form-control" min="1" id="candidatesno" name="candidatesno" required>
+                                <input type="number" class="form-control" min="1" id="candidatesno" name="participateno" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid number.
                                 </div>
@@ -59,6 +60,23 @@ include 'includes/common.php';
                                 <div class="invalid-feedback">
                                     Please provide a valid email.
                                 </div>
+                            </div>
+                            <div>
+                            <label for="event" class="form-label mt-1">Event</label>
+                                <select name="event" class="form-select" aria-label="Default select example">
+                                    <option value="techno">Technology</option>
+                                    <option value="seminar">Seminar</option>
+                                    <option value="djnights">DJ nights</option>
+                                    <option value="indoor">Indoor</option>
+                                    <option value="workshops">Workshops</option>
+                                    <option value="gamespace">Game Space</option>
+                                    <option value="tna">Theaters and Arts</option>
+                                    <option value="conferences">Conferences</option>
+                                    <option value="speakersession">Speaker session</option>
+                                    <option value="photography">Photography</option>
+                                    <option value="modeling">Modeling</option>
+                                    <option value="designing">Designing</option>
+                                </select>
                             </div>
                             <div class="">
                                 <label for="date" class="form-label mt-1">Event Date</label>
