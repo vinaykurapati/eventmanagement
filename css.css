@@ -1,0 +1,27 @@
+img{
+    height: 170px;
+    width: 300px;
+    margin: 10px;
+}
+p a{
+    text-decoration: none;
+}
+body{
+    /* color: aliceblue; */
+    text-align: center;
+    background-image: url('./img//green.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+footer{
+    color: #6a6c6d;
+}
+.modal{
+    color: black;
+    text-align: left;
+}
+label{
+    color: black;
+}
